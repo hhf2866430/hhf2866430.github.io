@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - web_mapping_project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Cultural Infrastructure in London</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+   <div id="map"></div>
+   <div id="menu">
+    <h3>Cultural Infrastructure in London</h3>
+    
+    <p>Data: <a href='https://data.london.gov.uk/dataset/cultural-infrastructure-map-2023'> Cultural Infrastructure Map 2023 </a> </p>
+    
+    <div class='session'>
+      <div class='row' id='filters'>
+        <input id='cinema' type='checkbox' name='toggle' checked='checked' value='cinema'>
+        <label for='cinema'>cinema</label>
+       
+        <input id='library' type='checkbox' name='toggle' checked='checked' value='library'>
+        <label for='library'>library</label>
+       
+        <input id='museum' type='checkbox' name='toggle' checked='checked' value='museum'>
+        <label for='museum'>museum</label>
+       
+        <input id='theatre' type='checkbox' name='toggle' checked='checked' value='theatre'>
+        <label for='theatre'>theatre</label>
+      </div>
+    </div>      
+  </div>  
+ 
+  <div class="map-overlay" id="legend"> 
+    <h4> <span style="color:red"> · </span> cinema </h4>
+    <h4> <span style="color:blue"> · </span> library</h4>
+    <h4> <span style="color:yellow"> · </span> museum</h4>
+    <h4> <span style="color:green"> · </span> theatre</h4>
+  </div>
+  
+  <br>
+  <button id="getback">Zoom</button>
+  
+</body>
+</html>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
